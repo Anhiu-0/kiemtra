@@ -1,0 +1,97 @@
+//layout2
+	<TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Dang ky mon hoc"
+        android:textSize="30sp" />
+
+    <RadioGroup
+        android:id="@+id/rgmonhoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv1"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mon hoc"
+            android:textSize="15sp" />
+
+        <CheckBox
+            android:id="@+id/cb1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="java" />
+
+        <CheckBox
+            android:id="@+id/cb2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="C#" />
+
+        <CheckBox
+            android:id="@+id/cb3"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Android" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Dang ky mon hoc"
+            android:textSize="15sp" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rggioitinh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rgmonhoc"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rb1"
+            android:text="nam" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rb2"
+            android:text="nam" />
+
+    </RadioGroup>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnchoose"
+        android:layout_below="@+id/rggioitinh"
+        android:layout_marginTop="20dp"
+        android:text="Choose"/>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnexit2"
+        android:layout_toEndOf="@+id/btnchoose"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/rggioitinh"
+        android:layout_marginTop="20dp"
+        android:text="exit"/>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnnext2"
+        android:layout_toEndOf="@+id/btnexit2"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/rggioitinh"
+        android:layout_marginTop="20dp"
+        android:text="next"/>

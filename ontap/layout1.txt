@@ -1,0 +1,65 @@
+//layout1
+	<TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Login"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv1"
+        android:text="Username"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv2"
+        android:layout_marginTop="30dp"
+        android:text="Password"
+        android:textSize="25sp" />
+    <EditText
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:id="@+id/etuser"
+        android:background="#B6D9E8"
+        android:layout_below="@+id/tv1"
+        android:layout_toEndOf="@+id/tv2"
+        android:layout_marginLeft="20dp"/>
+    <EditText
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:id="@+id/etpass"
+        android:background="#B6D9E8"
+        android:layout_below="@+id/etuser"
+        android:layout_toEndOf="@+id/tv2"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tv3">
+        <Button
+            android:id="@+id/btnsignin"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv3"
+            android:layout_marginTop="20dp"
+            android:text="Sign In"/>
+        <Button
+            android:id="@+id/btnexit"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv3"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/btnsignin"
+            android:layout_marginLeft="20dp"
+            android:text="exit"/>
+    </LinearLayout>

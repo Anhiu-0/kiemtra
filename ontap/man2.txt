@@ -1,0 +1,55 @@
+//man2
+    CheckBox java,c_,android;
+    RadioButton nam,nu;
+    Button choose,exit2,next2;
+    private void anhxa(){
+        java = findViewById(R.id.cb1);
+        c_ = findViewById(R.id.cb2);
+        android = findViewById(R.id.cb3);
+        nam = findViewById(R.id.rb1);
+        nu = findViewById(R.id.rb2);
+        choose = findViewById(R.id.btnchoose);
+        exit2 =findViewById(R.id.btnexit2);
+        next2 = findViewById(R.id.btnnext2);
+    }
+    private void thoat2(){
+        exit2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+    }
+    private void hienthi(){
+        choose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String monhoc = "", gioitinh = "",thongtin;
+                if (java.isChecked()){
+                    monhoc += "java";
+                } else if (c_.isChecked()) {
+                    monhoc += "c#";
+                } else if (android.isChecked()) {
+                    monhoc += "android";
+                }
+
+                if (nam.isChecked()){
+                    gioitinh += "nam";
+                } else if (nu.isChecked()) {
+                    gioitinh += "nu";
+                }
+                thongtin = "mon hoc: "+monhoc + "/n "+"gioi tinh: "+gioitinh;
+                AlertDialog.Builder builder = new AlertDialog.Builder(monitor2.this);
+                builder.setTitle("thong bao").setMessage(thongtin).setPositiveButton("ok",null).show();
+            }
+        });
+    }
+    private void chuyen(){
+        next2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(monitor2.this, monitor3.class);
+                startActivity(intent);
+            }
+        });
+    }

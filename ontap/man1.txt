@@ -1,0 +1,35 @@
+//man1
+    EditText user,pass;
+    Button signin,exit;
+    private void anhxa(){
+        user = findViewById(R.id.etuser);
+        pass = findViewById(R.id.etpass);
+        signin = findViewById(R.id.btnsignin);
+        exit = findViewById(R.id.btnexit);
+    }
+    private void thoat(){
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+    }
+    private void dangnhap(){
+        signin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String checkusername = user.getText().toString();
+                String checkpassword = pass.getText().toString();
+                if (checkusername.isEmpty() || checkpassword.isEmpty()){
+                    Toast.makeText(monitor1.this, "vui long dien day du thong tin", Toast.LENGTH_SHORT).show();
+                } else if (checkusername.equals("cnttk15hn") && checkpassword.equals("cnttk15")) {
+                    Toast.makeText(monitor1.this, "dang nhap thanh cong", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(monitor1.this,monitor2.class);
+                    startActivity(intent);
+                }else {
+                    Toast.makeText(monitor1.this, "dang nhap khong thanh cong", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }

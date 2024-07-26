@@ -1,0 +1,37 @@
+//layout4
+	<ListView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:id="@+id/lv4"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hien thi"
+        android:id="@+id/btnhienthi4"/>
+///////////////////////////////////////////////////////
+//layout item
+<TextView
+        android:id="@+id/ten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"/>
+    <TextView
+        android:id="@+id/lg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"/>
+///////////////////////////////////////////////////////////
+//json
+{
+  "dscongnhan": [
+    {
+      "hoten": "Nguyễn Duy Anh",
+      "luong": "10000000"
+    },
+    {
+      "hoten": "Trần Văn Cẩm",
+      "luong": "10000000"
+
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+//man4
+    Button hienthi4;
+    ListView lv;
+    ArrayList<congnhan> list = new ArrayList<>();
+    congnhanadater congnhanadater;
+    private void anhxa(){
+        lv = findViewById(R.id.lv4);
+        hienthi4 =  findViewById(R.id.btnhienthi4);
+    }
+
+    private String loadjson() {
+        String json =null;
+        try {
+            InputStream inputStream = getAssets().open("congnhan.json");
+            int size = inputStream.available();
+            byte[] buffer = new byte[size];
+            inputStream.read(buffer);
+            inputStream.close();
+            json = new String(buffer, StandardCharsets.UTF_8);
+            laydulieu(json);
+
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return json;
+    }
+    private void laydulieu(String json) {
+
+        try {
+            JSONObject jsonObject = new JSONObject(json);
+            JSONArray canboArray = jsonObject.getJSONArray("dscongnhan");
+            for (int i = 0; i < canboArray.length(); i++) {
+
+                JSONObject dscongnhan = canboArray.getJSONObject(i);
+
+                String ht = dscongnhan.getString("hoten");
+                String lg = dscongnhan.getString("luong");
+
+                list.add(new congnhan("hotencn: "+ht,"luongcn: "+ lg));
+
+            }
+
+            congnhanadater = new congnhanadater(this,list);
+            lv.setAdapter(congnhanadater);
+
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
+
+    }

@@ -1,0 +1,29 @@
+//man3
+    ListView listView;
+    Button next3;
+    private void anhxa(){
+        listView = findViewById(R.id.listview);
+        next3 = findViewById(R.id.btnnext3);
+    }
+    private void chuyen(){
+        next3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(monitor3.this, monitor4.class);
+                startActivity(intent);
+            }
+        });
+    }
+    private void thongtin(){
+        String[] data = {"tao","le","cam","man","dao"};
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(monitor3.this, android.R.layout.simple_list_item_1,data);
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                Toast.makeText(monitor3.this, data[i], Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
